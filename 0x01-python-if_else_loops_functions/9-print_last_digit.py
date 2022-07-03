@@ -7,3 +7,4 @@ def print_last_digit(number):
     else:
         last = 0
     print(f"{last}", end="")
+    return last
