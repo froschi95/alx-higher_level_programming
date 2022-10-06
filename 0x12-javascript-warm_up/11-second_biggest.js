@@ -3,6 +3,9 @@ let nextMax = 0;
 const args = process.argv.slice(2);
 if (args.length > 1) {
   args.sort();
-  nextMax = args[args.length - 2];
+  fmax = Math.max(...args);
+  index = args.indexOf(fmax);
+  args.splice(index, 1);
+  nextMax = Math.max(...args);
 }
 console.log(nextMax);
