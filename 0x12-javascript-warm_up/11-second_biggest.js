@@ -6,7 +6,7 @@ if (args.length > 1) {
   const fmax = Math.max(...args);
   var index = args.indexOf(fmax);
   args.splice(index, 1);
-  console.log(args)
+  // console.log(args)
   nextMax = Math.max(...args);
 }
 console.log(nextMax);
