@@ -4,7 +4,7 @@ const args = process.argv.slice(2).map(x => parseInt(x));
 if (args.length > 1) {
   args.sort();
   const fmax = Math.max(...args);
-  var index = args.indexOf(fmax);
+  const index = args.indexOf(fmax);
   args.splice(index, 1);
   // console.log(args)
   nextMax = Math.max(...args);
