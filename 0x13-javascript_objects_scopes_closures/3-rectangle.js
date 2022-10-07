@@ -14,5 +14,6 @@ module.exports = class Rectangle {
       if (i < this.height) {
         process.stdout.write('\n');
       }
+    }
   }
 };
