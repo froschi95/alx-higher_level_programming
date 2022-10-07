@@ -13,5 +13,5 @@ module.exports = class Square extends Square1 {
         process.stdout.write('\n');
       }
     }
-  } 
+  }
 };
