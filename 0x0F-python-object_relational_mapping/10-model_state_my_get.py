@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-list the first State object from a database
+prints the State object with the name passed as argument from a database
 """
 
 import sqlalchemy
@@ -16,9 +16,9 @@ if __name__ == "__main__":
     Base.metadata.create_all(eng)
     Session = sessionmaker(bind=eng)
     session = Session()
-    first_state = session.query(State).order_by(State.id).first()
-    if first_state is not None:
-        print("{}: {}".format(first_state.id, first_state.name))
+    state = session.query(State).filter_by(name=argv[4]).first()
+    if state is not None:
+        print(str(state.id))
     else:
-        print("Nothing")
+        print("Not found")
     session.close()
